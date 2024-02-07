@@ -6,6 +6,8 @@ import LinkedInIcon from "../components/icons/LinkedIn.astro";
 import GitHubIcon from "../components/icons/GitHub.astro";
 import MailIcon from "../components/icons/Mail.astro";
 import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import BriefCase from "../components/icons/BriefCase.astro";
 ---
 
 <Layout
@@ -13,7 +15,7 @@ import Experience from "../components/Experience.astro";
   description="Contrata a rulo para crear tu sitio web. Desarrollador Web."
 >
   <main>
-    <section class="w-full lg:w-[740px] mx-auto py-44">
+    <SectionContainer class="py-44 pb-24">
       <img
         class="rounded-full size-12 mb-4"
         src="https://github.com/Tres-zE.png"
@@ -50,10 +52,14 @@ import Experience from "../components/Experience.astro";
           rulo_dev@outlook.com
         </SocialPill>
       </nav>
-    </section>
+    </SectionContainer>
 
-    <section>
+    <SectionContainer id="experiencia">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-2 items-center">
+        <BriefCase class="size-7" />
+        Experiencia Laboral
+      </h2>
       <Experience />
-    </section>
+    </SectionContainer>
   </main>
 </Layout>
