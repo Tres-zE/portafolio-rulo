@@ -1,0 +1,77 @@
+---
+import HtmlIcon from "../components/icons/Html.astro";
+import CssIcon from "../components/icons/Css.astro";
+const TAGS = {
+  HTML: {
+    name: "HTML5",
+    class: "bg-[#CF3E22]/50 text-white",
+    icon: HtmlIcon,
+  },
+  CSS: {
+    name: "CSS3",
+    class: "bg-[#007AD9]/50 text-white",
+    icon: CssIcon,
+  },
+};
+const PROJECTS = [
+  {
+    title: "WashPro - Reparación o matenimiento de lavadoras en Tehuacán",
+    description: "Proyecto realizado para un técnico reparador de lavadoras",
+    link: "https://washpro.netlify.app/",
+    github: "https://github.com/Tres-zE/lavadoras",
+    image: "/projects/wahspro.webp",
+    tags: [TAGS.HTML, TAGS.CSS],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ image, title, description, tags }) => (
+    <article>
+      <h3 class="text-2xl font-semibold text-green-100/90 mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-4 flex-row mb-4">
+        {tags.map((tag) => (
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
+            >
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <img
+        class="rounded shadow-2xl shadow-white/10"
+        src={image}
+        alt={`Captura de pantalla del proyecto ${image}`}
+      />
+    </article>
+  ))
+}
+{
+  PROJECTS.map(({ image, title, description, tags }) => (
+    <article>
+      <h3 class="text-2xl font-semibold text-green-100/90 mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-4 flex-row mb-4">
+        {tags.map((tag) => (
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
+            >
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <img
+        class="rounded shadow-2xl shadow-white/10"
+        src={image}
+        alt={`Captura de pantalla del proyecto ${image}`}
+      />
+    </article>
+  ))
+}
