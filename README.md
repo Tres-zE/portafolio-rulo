@@ -1,3 +1,10 @@
+Portafolio inspirado en el directo de midudev
+![image](https://github.com/Tres-zE/portafolio-rulo/assets/123023934/c88ad7ca-21fd-4b7b-ab09-cd2ca71b4816)
+
+
+
+
+
 # Astro Starter Kit: Basics
 
 ```sh
