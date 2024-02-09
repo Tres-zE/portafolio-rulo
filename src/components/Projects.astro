@@ -25,43 +25,53 @@ const PROJECTS = [
     image: "/projects/wahspro.webp",
     tags: [TAGS.HTML, TAGS.CSS],
   },
+  {
+    title: "Barbería Alura",
+    description: "Proyecto realizado durante la estancia en Alura-Latam",
+    link: "https://alura-barberia.netlify.app/",
+    github: "https://github.com/Tres-zE/BARBERIA",
+    image: "/projects/barlura.webp",
+    tags: [TAGS.HTML, TAGS.CSS],
+  },
 ];
 ---
 
-{
-  PROJECTS.map(({ image, title, description, tags, link, github }) => (
-    <article>
-      <h3 class="text-2xl font-semibold text-[#00abe3] mb-2">{title}</h3>
-      <p class="text-lg mb-4 text-pretty">{description}</p>
-      <ul class="flex gap-x-4 flex-row mb-4">
-        {tags.map((tag) => (
-          <li>
-            <span
-              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
-            >
-              <tag.icon class="size-4" />
-              {tag.name}
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        loading="lazy"
-        class="rounded shadow-2xl shadow-white/10"
-        src={image}
-        alt={`Captura de pantalla del proyecto ${image}`}
-      />
-      <footer class="flex gap-4 justify-center mt-4">
-        <LinkButtonIcon href={github}>
-          <GitHubIcon class="size-6" />
-          Ver código fuente
-        </LinkButtonIcon>
+<section class="flex flex-col gap-y-20">
+  {
+    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+      <article>
+        <h3 class="text-2xl font-semibold text-[#00abe3] mb-2">{title}</h3>
+        <p class="text-lg mb-4 text-pretty">{description}</p>
+        <ul class="flex gap-x-4 flex-row mb-4">
+          {tags.map((tag) => (
+            <li>
+              <span
+                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
+              >
+                <tag.icon class="size-4" />
+                {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+        <img
+          loading="lazy"
+          class="rounded shadow-2xl shadow-white/10"
+          src={image}
+          alt={`Captura de pantalla del proyecto ${image}`}
+        />
+        <footer class="flex gap-4 justify-center mt-4">
+          <LinkButtonIcon href={github}>
+            <GitHubIcon class="size-6" />
+            Ver código fuente
+          </LinkButtonIcon>
 
-        <LinkButtonIcon href={link}>
-          <WebIcon />
-          Ir al sitio web
-        </LinkButtonIcon>
-      </footer>
-    </article>
-  ))
-}
+          <LinkButtonIcon href={link}>
+            <WebIcon />
+            Ir al sitio web
+          </LinkButtonIcon>
+        </footer>
+      </article>
+    ))
+  }
+</section>
