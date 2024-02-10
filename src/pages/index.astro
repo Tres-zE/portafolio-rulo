@@ -13,6 +13,8 @@ import Projects from "@/components/Projects.astro";
 import SectionContainer from "@/components/SectionContainer.astro";
 import ProfileCheck from "@/components/icons/ProfileCheck.astro";
 import Aboutme from "@/components/Aboutme.astro";
+import ContactIcon from "@/components/icons/Contact.astro";
+import Contacto from "@/components/Contacto.astro";
 ---
 
 <Layout
@@ -83,6 +85,14 @@ import Aboutme from "@/components/Aboutme.astro";
         Sobre mí
       </h2>
       <Aboutme />
+    </SectionContainer>
+
+    <SectionContainer id="contacto">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-2 items-center">
+        <ContactIcon class="size-7" />
+        Contacto
+      </h2>
+      <Contacto />
     </SectionContainer>
   </main>
 </Layout>
